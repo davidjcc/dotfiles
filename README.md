@@ -1,2 +1,2 @@
 # dotfiles
-My dotfiles
+My neovim and wezterm dotfiles.
