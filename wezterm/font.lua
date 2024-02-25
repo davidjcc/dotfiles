@@ -1,20 +1,21 @@
-local w = require("wezterm")
+local wezterm = require("wezterm")
 
-local config = w.config_builder()
+return {
+  font = wezterm.font("FiraCode Nerd Font Mono"),
 
-config.freetype_load_flags = "NO_HINTING|NO_AUTOHINT"
-config.freetype_render_target = "HorizontalLcd"
-config.freetype_load_target = "HorizontalLcd"
-config.adjust_window_size_when_changing_font_size = false
-config.font = w.font("FiraCode Nerd Font Mono")
-config.font_size = 10
-config.line_height = 1.0
-config.cell_width = 0.9
-config.window_frame = {
-  font = w.font {
-    family = 'Noto Sans',
-    weight = 'Regular'
-  },
+  freetype_load_flags = "NO_HINTING|NO_AUTOHINT",
+  freetype_render_target = "HorizontalLcd",
+  freetype_load_target = "HorizontalLcd",
+  adjust_window_size_when_changing_font_size = false,
+
+  font_size = 10,
+  line_height = 1.0,
+  cell_width = 1.0,
+  window_frame = {
+    font = wezterm.font {
+      family = 'Noto Sans',
+      weight = 'Regular'
+    },
+  }
 }
 
-return config

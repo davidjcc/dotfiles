@@ -13,7 +13,6 @@ local merge_config = function(module)
 end
 
 config = {
-  -- default_prog = { "powershell", "-NoLogo" },
   default_prog = {"C:/Program Files/PowerShell/7/pwsh.exe", "-NoLogo" },
 
   enable_tab_bar = true,
