@@ -1,7 +1,5 @@
 # Install scoop if we don't have it installed and install all depencencies.
 if (!(Get-Command "scoop")) {
-    Write-Host "Installing scoop..."
-
     # Install scoop.
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
@@ -9,9 +7,7 @@ if (!(Get-Command "scoop")) {
     # Install the scoop dependencies.
     scoop bucket add extras
     scoop install neovim wezterm ripgrep sed zoxide starship eza
-} else {
-    Write-Host "Scoop is already installed."
-}
+} 
 
 
 # Set up our config directory
