@@ -1,2 +1,16 @@
 # dotfiles
-My neovim and wezterm dotfiles.
+My powershell, neovim and wezterm dotfiles.
+
+I am currently using these with powershell on windows which requires `XDG_CONFIG_HOME` 
+to be set in your powershell profile to wherever you clone this repo to. For example, if we
+clone this to `${USERPROFLE}.config`:
+
+This config will require you to edit your powershell profile directory (in this example it will be `${USERPROFILE}/.config/powershell`:
+```pwsh
+New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' Personal -Value "%USERPROFILE%/.config/powershell/" -Type ExpandString -Force
+```
+### Dependencies
+The neovim config requires the following to be installed:
+- A C/C++ compiler (in this case MSVC)
+- ripgrep
+- sed

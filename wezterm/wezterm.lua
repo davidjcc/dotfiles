@@ -3,7 +3,6 @@ local a = w.action
 
 -- https://hackernoon.com/get-the-most-out-of-your-terminal-a-comprehensive-guide-to-wezterm-configuration
 
-
 return {
   default_prog = { "powershell", "-NoLogo" },
 
