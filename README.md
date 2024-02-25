@@ -15,3 +15,4 @@ The neovim config requires the following to be installed:
 - ripgrep
 - sed
 - zoxide
+- starship
