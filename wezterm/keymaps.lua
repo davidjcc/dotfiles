@@ -17,7 +17,6 @@ return {
     { key = 'k', mods = 'ALT', action = wezterm.action.ActivatePaneDirection("Up")},
     { key = 'j', mods = 'ALT', action = wezterm.action.ActivatePaneDirection("Down")},
 
-    { key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentPane({confirm = true})},
-    { key = 'n', mods = 'CTRL', action = "ToggleFullScreen"},
+    { key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentPane({confirm = true})}
   }
 }
