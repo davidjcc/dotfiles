@@ -9,18 +9,19 @@ if (!(Get-Command "scoop")) {
     scoop install neovim wezterm ripgrep sed zoxide starship eza
 } 
 
-# Set up our config directory
+# Set up our config directory for neovim and wezterm.
 $env:XDG_CONFIG_HOME = "${env:USERPROFILE}/.config"
 
-Set-Alias vim nvim
-Set-Alias vi nvim
-
+# Utility make and change directory function.
 function mkd($dir) {
     New-Item -ItemType Directory -Force -Path $dir -ErrorAction Stop | Out-Null
     Set-Location -Path $dir
 }
 
+Set-Alias -Name vim -Value nvim
+Set-Alias -Name vi -Value nvim
 Set-Alias -Name ls -Value eza -Option AllScope
+Set-Alias -Name ff -Value fzf
 
 Invoke-Expression (&starship init powershell)
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+Invoke-Expression (& { (zoxide init --cmd=cd powershell | Out-String) })
