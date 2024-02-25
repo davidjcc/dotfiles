@@ -14,3 +14,4 @@ The neovim config requires the following to be installed:
 - A C/C++ compiler (in this case MSVC)
 - ripgrep
 - sed
+- zoxide
