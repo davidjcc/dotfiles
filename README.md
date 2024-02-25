@@ -16,3 +16,4 @@ The neovim config requires the following to be installed:
 - sed
 - zoxide
 - starship
+- eza

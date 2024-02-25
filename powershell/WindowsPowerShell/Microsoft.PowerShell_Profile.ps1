@@ -9,5 +9,7 @@ function mkd($dir) {
     Set-Location -Path $dir
 }
 
+Set-Alias -Name ls -Value eza -Option AllScope
+
 Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
