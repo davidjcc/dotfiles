@@ -24,8 +24,10 @@ Set-Alias -Name ls -Value eza -Option AllScope
 Set-Alias -Name ff -Value fzf
 Set-Alias -Name lg -Value lazygit
 
+# Override the Ctrl+r and Ctrl+f keybinds to use fzf.
 Import-Module PSFzf
 Set-PsFzfOption -PSReadLineChordProvider ‘Ctrl+f’ -PSReadLineChordReverseHistory ‘Ctrl+r’
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # Build the current directory. TODO: Replace the dotnet build with whatever
 # build command we want to use.
