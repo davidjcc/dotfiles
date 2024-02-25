@@ -9,7 +9,6 @@ if (!(Get-Command "scoop")) {
     scoop install neovim wezterm ripgrep sed zoxide starship eza
 } 
 
-
 # Set up our config directory
 $env:XDG_CONFIG_HOME = "${env:USERPROFILE}/.config"
 
@@ -21,8 +20,7 @@ function mkd($dir) {
     Set-Location -Path $dir
 }
 
-function eza_with_icons { eza --icons=auto }
-Set-Alias -Name ls -Value eza_with_icons -Option AllScope
+Set-Alias -Name ls -Value eza -Option AllScope
 
 Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
