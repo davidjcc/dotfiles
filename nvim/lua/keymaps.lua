@@ -51,7 +51,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<leader>bd', '<CMD>:Make debug<CR>', { desc = 'Build debug' })
 vim.keymap.set('n', '<leader>br', '<CMD>:Make release<CR>', { desc = 'Build release' })
 
--- Remap the save
+-- Remap the save and quit
+vim.keymap.set('n', '<leader>q', '<CMD>:q<CR>', { desc = 'Close the current buffer' })
 vim.keymap.set('n', '<leader>x', '<CMD>:x<CR>', { desc = 'Save and close the current buffer' })
 vim.keymap.set('n', '<leader>w', '<CMD>:w<CR>', { desc = '[W]rite the current buffer' })
 vim.keymap.set('n', '<C-s>', '<CMD>:w<CR>', {})
