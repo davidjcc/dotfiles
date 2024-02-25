@@ -1,14 +1,3 @@
-# Install scoop if we don't have it installed and install all depencencies.
-if (!(Get-Command "scoop")) {
-    # Install scoop.
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-
-    # Install the scoop dependencies.
-    scoop bucket add extras
-    scoop install neovim wezterm ripgrep sed zoxide starship eza
-} 
-
 # Set up our config directory for neovim and wezterm.
 $env:XDG_CONFIG_HOME = "${env:USERPROFILE}/.config"
 

@@ -1,24 +1,41 @@
 # dotfiles
-My powershell, neovim and wezterm dotfiles.
 
-I am currently using these with powershell on windows which requires `XDG_CONFIG_HOME` 
-to be set in your powershell profile to wherever you clone this repo to. For example, if we
-clone this to `${USERPROFLE}.config`:
+My Windows, powershell, nvim, and wezterm dotfiles.
 
-This config will require you to edit your powershell profile directory (in this example it will be `${USERPROFILE}/.config/powershell`:
-```pwsh
-New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' Personal -Value "%USERPROFILE%/.config/powershell/" -Type ExpandString -Force
+To use these dotfiles you need to set the powershell profile directory via the following command:
+
+```powershell
+New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders'
+    Personal -Value "%USERPROFILE%/.config/powershell/" -Type ExpandString -Force
+```
+
+This will set the powershell profile load location to `$USERPROFILE%/.config/powershell`.
+
+Then install the latest powershell version and powershell dependencies:
+
+```powershell
 winget install Microsoft.Powershell
-Install-Module psreadline -Force
+Install-Module PSReadLine -Force
 Install-Module PSFzf -Force
 ```
-### Dependencies
-The neovim config requires the following to be installed:
-- scoop
-- A C/C++ compiler
+I use [scoop](https://scoop.sh) as my dependency manager. To install:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+The following dependencies are required to be installed, either via scoop or your package manager
+of choice:
+
+- A C/C++ compiler (cl, clang, gcc, or zig)
 - ripgrep
 - sed
 - zoxide
 - starship
 - eza
 - bottom
+
+```powershell
+scoop install neovim wezterm ripgrep sed starship eza bottom zig
+```
