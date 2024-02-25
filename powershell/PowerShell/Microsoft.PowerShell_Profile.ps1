@@ -20,9 +20,12 @@ function mkd($dir) {
 
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name vi -Value nvim
-Set-Alias -Name ls -Value eza -Option AllScope
 Set-Alias -Name ff -Value fzf
 Set-Alias -Name lg -Value lazygit
+
+# Add alias for ls and allow extra arguments to be passed
+function eza_with_args() { eza --icons=auto $args[0] }
+Set-Alias -Name ls -Value eza_with_args -Option AllScope
 
 # Override the Ctrl+r and Ctrl+f keybinds to use fzf.
 Import-Module PSFzf
