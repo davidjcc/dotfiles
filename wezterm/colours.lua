@@ -1,6 +1,6 @@
 
 return {
-  color_scheme = "tokyonight",
+  color_scheme = 'Adventure',
 
   colors = {
     background = "#0E111D"
