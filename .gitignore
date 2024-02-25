@@ -2,3 +2,5 @@ scoop/
 winfetch/
 lazygit/
 nvim/lazy-lock.json
+powershell/WindowsPowershell/Modules/
+powershell/WindowsPowershell/Scripts/
