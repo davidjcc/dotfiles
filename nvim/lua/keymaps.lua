@@ -6,7 +6,7 @@ vim.keymap.set("n", "<Leader>/", ":lua require('neogen').generate()<CR>", {norem
 
 -- Map the split and vsplit
 vim.keymap.set('n', "<leader>ss", "<CMD>:split<CR>", { silent = true, desc = "[S]plit the current buffer" })
-vim.keymap.set('n', "<leader>sv", "<CMD>:vsplit<CR>", { silent = true, desc = "[S]plit the current buffer [v]ertically"})
+vim.keymap.set('n', "<leader>vv", "<CMD>:vsplit<CR>", { silent = true, desc = "Split the current buffer [v]ertically"})
 
 
 -- Remap the visual block keybind as it is already used as the system paste.
