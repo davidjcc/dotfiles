@@ -2,8 +2,8 @@ return {
     -- Add indentation guides TODO: Make the lines darker.
     -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
-    -- Add floating status lines to buffers.
     {
+    -- Add floating status lines to buffers.
         'b0o/incline.nvim',
         opts = {
             window = {

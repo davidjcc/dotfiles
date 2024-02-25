@@ -8,11 +8,6 @@ vim.keymap.set("n", "<Leader>/", ":lua require('neogen').generate()<CR>", {norem
 vim.keymap.set('n', "<leader>ss", "<CMD>:split<CR>", { silent = true, desc = "[S]plit the current buffer" })
 vim.keymap.set('n', "<leader>vv", "<CMD>:vsplit<CR>", { silent = true, desc = "Split the current buffer [v]ertically"})
 
-
--- Remap the visual block keybind as it is already used as the system paste.
--- vim.keymap.set('n', '<A-v>', '<S-v>')
--- vim.keymap.set('n', '<S-v>', '<C-v>')
-
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -37,10 +32,6 @@ vim.keymap.set('n', '<leader>ld', vim.diagnostic.setqflist, { desc = '[L]ist all
 -- Oil keybind
 vim.keymap.set('n', '-', require("oil").open_float, { desc = "Toggle the oil window" })
 
--- Diagnostic keymaps
--- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
--- vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
--- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
