@@ -29,6 +29,8 @@ function ll_alias() { eza -l --icons=auto $args[0] }
 Set-Alias -Name ls -Value ls_alias -Option AllScope
 Set-Alias -Name ll -Value ll_alias -Option AllScope
 
+Set-Alias -Name gps -Value btm -Option AllScope -Force
+
 # Override the Ctrl+r and Ctrl+f keybinds to use fzf.
 Import-Module PSFzf
 Set-PsFzfOption -PSReadLineChordProvider ‘Ctrl+f’ -PSReadLineChordReverseHistory ‘Ctrl+r’

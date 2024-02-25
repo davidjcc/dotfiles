@@ -21,4 +21,4 @@ The neovim config requires the following to be installed:
 - zoxide
 - starship
 - eza
-
+- bottom
