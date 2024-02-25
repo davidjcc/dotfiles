@@ -1,5 +1,5 @@
 
-require 'nvim-treesitter.install'.compilers = { "cl" }
+require 'nvim-treesitter.install'.compilers = { "cl", "gcc", "clang", "zig" }
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'

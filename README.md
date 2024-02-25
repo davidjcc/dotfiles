@@ -11,7 +11,8 @@ New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User 
 ```
 ### Dependencies
 The neovim config requires the following to be installed:
-- A C/C++ compiler (in this case MSVC)
+- scoop
+- A C/C++ compiler
 - ripgrep
 - sed
 - zoxide
