@@ -191,6 +191,9 @@ return {
         },
         opts = {
             pickers = {
+                find_files = {
+                    hidden = true
+                },
                 colorscheme = {
                     enable_preview = true
                 }
