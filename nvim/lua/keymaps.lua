@@ -32,7 +32,7 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>gg', require('telescope.builtin').live_grep, { desc = 'Search by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
--- vim.keymap.set('n', '<leader>ld', vim.diagnostic.setqflist, { desc = '[L]ist all [D]iagnostics in the quick fix list' })
+vim.keymap.set('n', '<leader>ld', vim.diagnostic.setqflist, { desc = '[L]ist all [D]iagnostics in the quick fix list' })
 
 -- Oil keybind
 vim.keymap.set('n', '-', require("oil").open_float, { desc = "Toggle the oil window" })
