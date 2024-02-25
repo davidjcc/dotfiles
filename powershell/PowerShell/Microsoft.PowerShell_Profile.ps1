@@ -30,6 +30,8 @@ Set-Alias -Name ls -Value ls_alias -Option AllScope
 Set-Alias -Name ll -Value ll_alias -Option AllScope
 
 Set-Alias -Name gps -Value btm -Option AllScope -Force
+function ps_args() { btm -b $args[0] }
+Set-Alias -Name ps -Value ps_args -Option AllScope -Force
 
 # Override the Ctrl+r and Ctrl+f keybinds to use fzf.
 Import-Module PSFzf
