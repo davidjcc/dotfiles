@@ -3,7 +3,7 @@ return {
   color_scheme = 'Adventure',
 
   colors = {
-    background = "#0E111D"
+    background = "#0E111D",
   },
 
   inactive_pane_hsb = {

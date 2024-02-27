@@ -141,7 +141,7 @@ return {
                 ["<C-x>"] = "actions.select_split",
                 ["<C-t>"] = "actions.select_tab",
                 ["<C-p>"] = "actions.preview",
-                ["<Esc>"] = "actions.close",
+                ["<C-c>"] = "actions.close",
                 ["<C-l>"] = "actions.refresh",
                 ["-"] = "actions.parent",
                 ["_"] = "actions.open_cwd",

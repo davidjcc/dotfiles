@@ -1,6 +1,7 @@
 scoop/
 winfetch/
 lazygit/
+lazydocker/
 nvim/lazy-lock.json
 powershell/Powershell/Modules/
-powershell/PindowsPowershell/Scripts/
+powershell/Powershell/Scripts/

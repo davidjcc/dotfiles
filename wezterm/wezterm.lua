@@ -14,6 +14,7 @@ end
 
 config = {
   default_prog = {"C:/Program Files/PowerShell/7/pwsh.exe", "-NoLogo" },
+  default_cwd = "C:/dev",
 
   enable_tab_bar = true,
   use_fancy_tab_bar = false,
