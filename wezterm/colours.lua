@@ -1,14 +1,14 @@
 
 return {
-  color_scheme = "OneHalfDark",
+  -- color_scheme = "OneHalfDark",
+  color_scheme = "Obsidian",
 
   colors = {
-    -- background = "#0E111D",
-    background = "#05050f"
+    background = "rgb(5, 5, 15)" -- background = "#05050f",
   },
 
-  -- inactive_pane_hsb = {
-  --   saturation = 0.9,
-  --   brightness = 0.6
-  -- },  -- s0.9, b0.8
+  inactive_pane_hsb = {
+  saturation = 0.9,
+  brightness = 0.8
+  },  
 }
