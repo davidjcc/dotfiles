@@ -14,8 +14,20 @@ end
 
 config = {
   default_prog = {"C:/Program Files/PowerShell/7/pwsh.exe", "-NoLogo" },
+  default_cwd = "C:/dev/",
+
   -- default_prog = {"wsl", "-d", "Debian" },
-  default_cwd = "C:/dev",
+  launch_menu = {
+    {
+      label = "WSL Debian",
+      args = { "wsl", "-d", "Debian" },
+    },
+    {
+      label = "Powershell",
+      args = {"C:/Program Files/PowerShell/7/pwsh.exe", "-NoLogo" },
+      cwd = "C:/dev"
+    }
+  },
 
   enable_tab_bar = true,
   use_fancy_tab_bar = false,

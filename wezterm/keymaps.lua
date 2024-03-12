@@ -83,7 +83,7 @@ return {
     split_nav('resize', 'k'),
     split_nav('resize', 'l'),
 
-    { key = 'w', mods = 'SHIFT|ALT', action = wezterm.action.CloseCurrentPane({confirm = true})},
+    { key = 'w', mods = 'SHIFT|ALT', action = wezterm.action.CloseCurrentPane({confirm = false})},
 
     -- Spawn a new command window and run it.
     {

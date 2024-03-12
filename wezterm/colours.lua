@@ -2,7 +2,7 @@
 return {
   -- color_scheme = "OneHalfDark",
   -- color_scheme = 'Catppuccin Mocha',
-  color_scheme = 'catppuccin-macchiato',
+  color_scheme = 'catppuccin-mocha',
 
   inactive_pane_hsb = {
   saturation = 0.9,
