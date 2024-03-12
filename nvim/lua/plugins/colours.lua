@@ -71,7 +71,8 @@ return {
         "RRethy/nvim-base16",
         rtp = "vim/",
         config = function()
-            vim.cmd.colorscheme "base16-catppuccin-mocha"
+            -- vim.cmd.colorscheme "base16-catppuccin-mocha"
+            vim.cmd.colorscheme "base16-catppuccin-macchiato"
             -- vim.cmd.colorscheme "base16-da-one-black"
         end,
         opts = {}
