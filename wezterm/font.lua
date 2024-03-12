@@ -1,7 +1,8 @@
 local wezterm = require("wezterm")
 
 return {
-  font = wezterm.font("JetBrains Mono", { weight = "Regular" }),
+  -- font = wezterm.font("JetBrains Mono", { weight = "Regular" }),
+  font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Regular" }),
   font_antialiasing = "Greyscale",
   font_hinting = "None",
   freetype_load_target = "Light",
