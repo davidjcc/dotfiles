@@ -4,7 +4,7 @@ return {
   color_scheme = "Obsidian",
 
   colors = {
-    background = "rgb(5, 5, 15)" -- background = "#05050f",
+    background = "rgb(10, 10, 20)" -- background = "#05050f",
   },
 
   inactive_pane_hsb = {
