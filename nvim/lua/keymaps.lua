@@ -38,6 +38,12 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- Add custom build cmd.
+local build_cmd = require("misc.set_build_cmd")
+vim.api.nvim_create_user_command('SetBuildCmd', build_cmd.set_build_cmd, {})
+vim.api.nvim_create_user_command('ExecuteBuildCmd', build_cmd.execute_build_cmd, {})
+vim.keymap.set('n', '<leader>bb', build_cmd.execute_build_cmd, { desc = 'Build debug' })
+
 -- Build using makefile (debug and release)
 vim.keymap.set('n', '<leader>bd', '<CMD>:Make debug<CR>', { desc = 'Build debug' })
 vim.keymap.set('n', '<leader>br', '<CMD>:Make release<CR>', { desc = 'Build release' })
@@ -48,13 +54,23 @@ vim.keymap.set('n', '<leader>x', '<CMD>:x<CR>', { desc = 'Save and close the cur
 vim.keymap.set('n', '<leader>w', '<CMD>:w<CR>', { desc = '[W]rite the current buffer' })
 vim.keymap.set('n', '<C-s>', '<CMD>:w<CR>', {})
 
--- Simpler buffer switching.
-vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Switch to left buffer' })
-vim.keymap.set('n', '<leader>j', '<C-w>j', { desc = 'Switch to below buffer' })
-vim.keymap.set('n', '<leader>k', '<C-w>k', { desc = 'Switch to above buffer' })
-vim.keymap.set('n', '<leader>l', '<C-w>l', { desc = 'Switch to right buffer' })
+-- Smart-Splits Buffer switching/resizing.
+vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
+-- moving between splits
+vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
+vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
+-- swapping buffers between windows
+vim.keymap.set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
+vim.keymap.set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
+vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
+vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)-- Open the quickfix list
 
--- Open the quickfix list
 local toggle_qf = require("misc.toggle_quickfix")
 vim.api.nvim_create_user_command("ToggleQuickfix", toggle_qf.toggle, {})
 vim.keymap.set('n', '<leader>qf', toggle_qf.toggle, { desc = 'Toggle the quickfix window' })

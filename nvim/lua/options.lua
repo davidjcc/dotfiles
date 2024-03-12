@@ -47,7 +47,8 @@ vim.opt.completeopt = 'menuone,noselect'
 vim.opt.termguicolors = true
 
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 3
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- Allow the visual block edit mode to use non existing characters.

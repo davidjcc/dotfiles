@@ -3,6 +3,10 @@ return {
     -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
     {
+        "mrjones2014/smart-splits.nvim"
+    },
+
+    {
     -- Add floating status lines to buffers.
         'b0o/incline.nvim',
         opts = {
@@ -27,6 +31,7 @@ return {
         -- Optional: Lazy load Incline
         event = 'VeryLazy',
     },
+
     -- Fun utility.
     {
         'Eandrju/cellular-automaton.nvim',
@@ -129,7 +134,7 @@ return {
     },
 
     -- Useful plugin to show you pending keybinds.
-    { 'folke/which-key.nvim',  opts = {} },
+    -- { 'folke/which-key.nvim',  opts = {} },
 
     {
         'stevearc/oil.nvim',
