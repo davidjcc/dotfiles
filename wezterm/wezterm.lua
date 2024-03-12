@@ -14,6 +14,7 @@ end
 
 config = {
   default_prog = {"C:/Program Files/PowerShell/7/pwsh.exe", "-NoLogo" },
+  -- default_prog = {"wsl", "-d", "Debian" },
   default_cwd = "C:/dev",
 
   enable_tab_bar = true,
@@ -22,7 +23,8 @@ config = {
   tab_max_width = 30,
   window_decorations = "RESIZE",
 
-  -- debug_key_events = true,
+  debug_key_events = false,
+  max_fps = 120,
 }
 
 merge_config("colours")
