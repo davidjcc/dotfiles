@@ -5,5 +5,5 @@ require("misc")
 require("lsp")
 require("telescope_init")
 require("treesitter_init")
-require("theme")
+-- require("theme")
 
