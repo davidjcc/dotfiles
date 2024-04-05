@@ -36,7 +36,7 @@ vim.keymap.set('n', '-', require("oil").open_float, { desc = "Toggle the oil win
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Add custom build cmd.
 local build_cmd = require("misc.set_build_cmd")
@@ -73,7 +73,7 @@ vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
 
 local toggle_qf = require("misc.toggle_quickfix")
 vim.api.nvim_create_user_command("ToggleQuickfix", toggle_qf.toggle, {})
-vim.keymap.set('n', '<leader>qf', toggle_qf.toggle, { desc = 'Toggle the quickfix window' })
+vim.keymap.set('n', '<leader>tq', toggle_qf.toggle, { desc = 'Toggle the quickfix window' })
 
 -- Toggle diagnostic
 local toggle_diag = require("misc.toggle_diagnostics")

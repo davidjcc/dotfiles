@@ -68,7 +68,15 @@ return {
         wezterm.action.SendKey { key = 'L', mods = 'CTRL' },
       },
     },    -- Pane creation
-    { key = "H", mods = "SHIFT|ALT", action = wezterm.action.SplitHorizontal({domain = "CurrentPaneDomain" }) },
+
+    {
+      key = "H", mods = "SHIFT|ALT", action = wezterm.action.SplitHorizontal(
+        {
+          domain = "CurrentPaneDomain",
+        }
+      )
+    },
+
     { key = "V", mods = "SHIFT|ALT", action = wezterm.action.SplitVertical({domain = "CurrentPaneDomain" }) },
 
     -- move between split panes
