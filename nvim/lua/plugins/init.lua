@@ -2,9 +2,7 @@ return {
     -- Add indentation guides TODO: Make the lines darker.
     -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
-    {
-        "mrjones2014/smart-splits.nvim"
-    },
+    "mrjones2014/smart-splits.nvim",
 
     {
     -- Add floating status lines to buffers.
@@ -253,5 +251,7 @@ return {
     -- Git related plugins
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
+
+    require("plugins.dap")
 }
 
